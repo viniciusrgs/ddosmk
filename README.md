@@ -1,7 +1,7 @@
 **Basica PROTEÇÃO DDOS MK**
 
 
-/ip firewall filter
+--/ip firewall filter
 add action=accept chain=input comment="Accept established" \
     connection-state=established
 add action=accept chain=input comment="Accept winbox" dst-port=8291 protocol=\
@@ -25,4 +25,4 @@ add action=accept chain=SYN-Protect comment=\
 add action=drop chain=SYN-Protect comment=\
     "Prote\E7\E3o DDos 5/5 prote\E7\E3o SYN Flood" connection-state=new \
     protocol=tcp tcp-flags=syn
-add action=drop chain=input comment="Drop input all wan" in-interface-list=WAN
+add action=drop chain=input comment="Drop input all wan" in-interface-list=WAN--
