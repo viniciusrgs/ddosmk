@@ -1,6 +1,7 @@
 **Basica PROTEÇÃO DDOS MK**
 
-
+<div style=" float: right; padding: 20px 0 20px 35px; font-family:Verdana, Geneva, sans-serif; font-size:12px;">
+   
 /ip firewall filter
 add action=accept chain=input comment="Accept established" \
     connection-state=established
@@ -26,3 +27,5 @@ add action=drop chain=SYN-Protect comment=\
     "Prote\E7\E3o DDos 5/5 prote\E7\E3o SYN Flood" connection-state=new \
     protocol=tcp tcp-flags=syn
 add action=drop chain=input comment="Drop input all wan" in-interface-list=WAN
+
+</div>
